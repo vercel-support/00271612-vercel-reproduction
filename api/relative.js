@@ -1,8 +1,7 @@
-const {get} = require("axios");
-
+import axios from 'axios';
 const handler = async (req, res) => {
     try {
-        const data = await get('/api/reference')
+        const data = await axios.get('/api/reference')
         res.status(200).json(data.data)
     } catch (error) {
         console.log(error)
